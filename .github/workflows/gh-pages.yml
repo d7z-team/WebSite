@@ -21,6 +21,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: show dists
+        run: apt-get install tree -y && tree .
+
       - name: Deploy
         if: success()
         uses: peaceiris/actions-gh-pages@v3
