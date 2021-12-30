@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from "@angular/platform-browser";
+import {TitleService} from "../../services/title.service";
 
 @Component({
   selector: 'app-main',
@@ -8,10 +8,10 @@ import {Title} from "@angular/platform-browser";
 })
 export class MainComponent implements OnInit {
 
-  constructor(private  title:Title) { }
+  constructor(private  title:TitleService) { }
 
   ngOnInit(): void {
-    this.title.setTitle("主页 - d7z.net")
+    this.title.setTitle("主页")
   }
 
 }
