@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Init module
-        uses: git submodule init
+        run: git submodule init
 
       - name: Update module
-        uses: git submodule update
+        run: git submodule update
 
       - name: Install Dep
-        uses: sudo apt-get install tree -y
+        run: sudo apt-get install tree -y
 
       - name: Checkout
         uses: actions/checkout@v2
