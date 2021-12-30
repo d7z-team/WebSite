@@ -1,6 +1,6 @@
 {
   "name": "web-site",
-  "version": "0.0.0",
+  "version": "stable",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
