@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-ng build --release
-cd dists || exit
+rm -rf dist
+npm run build
+cd dist || exit
 git init
-git add *
+git branch -m main
+git add "*"
 git commit -m "auto-push page"
 git remote add origin git@github.com:d7z-team/web-site.git
 git push -f origin main

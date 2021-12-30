@@ -32,6 +32,10 @@
                 "glob": "*",
                 "input": "share-assets/icon",
                 "output": "assets"
+              } ,{
+                "glob":"CNAME",
+                "input": "",
+                "output": ""
               }
             ],
             "styles": [
