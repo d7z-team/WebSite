@@ -1,0 +1,3 @@
+[submodule "share-assets"]
+	path = share-assets
+	url = https://github.com/d7z-team/public-assets/
