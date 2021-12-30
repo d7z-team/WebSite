@@ -21,8 +21,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: show dists
-        run: apt-get install tree -y && tree .
+      - name: Show dists
+        run: sudo apt-get install tree -y && tree .
 
       - name: Deploy
         if: success()
