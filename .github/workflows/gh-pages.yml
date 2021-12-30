@@ -7,14 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Init module
-        run: git submodule init
-
-      - name: Update module
-        run: git submodule update
-
-      - name: Install Dep
-        run: sudo apt-get install tree -y
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -23,6 +15,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
+
+      - name: Init module
+        run: git submodule init
+
+      - name: Update module
+        run: git submodule update
+
+      - name: Install Dep
+        run: sudo apt-get install tree -y
 
       - name: Install dependencies
         run: npm install
