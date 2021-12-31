@@ -1,13 +1,21 @@
 <div class="container">
-  <nz-page-header
-    (nzBack)="onBack()"
-    nzBackIcon
-  >
-    <nz-page-header-title>{{title.title}}</nz-page-header-title>
-    <nz-page-header-extra>
-      <button nz-button>Home</button>
-      <button nz-button>Github</button>
-      <button nz-button >Jenkins</button>
-    </nz-page-header-extra>
-  </nz-page-header>
+  <p>
+    <mat-toolbar color="primary">
+
+
+      <button mat-button class="logo" routerLink="/">
+        <img src="assets/logo.png" class="logo" alt="" height="30px">
+        <span class="title">Dragon's Zone</span>
+      </button>
+      <span class="menu">
+        <button class="menu-item" mat-button routerLink="/news">新鲜事</button>
+        <button class="menu-item" mat-button routerLink="/projects">项目概览</button>
+        <button class="menu-item" mat-button routerLink="/about">关于</button>
+      </span>
+      <span class="spacer"></span>
+      <a href="https://github.com/d7z-team" target="_blank">
+        <button class="menu-item" mat-button>Github</button>
+      </a>
+    </mat-toolbar>
+  </p>
 </div>
