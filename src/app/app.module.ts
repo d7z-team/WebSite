@@ -18,6 +18,8 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { AboutComponent } from './pages/about/about.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { SideComponent } from './views/sider/side.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 
 registerLocaleData(zh);
@@ -29,7 +31,8 @@ registerLocaleData(zh);
     HeaderComponent,
     AboutComponent,
     NewsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    SideComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ registerLocaleData(zh);
     MatIconModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatSidenavModule,
 
   ],
   providers: [{
