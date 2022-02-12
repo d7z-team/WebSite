@@ -1,22 +1,31 @@
 <div class="container">
-  <p>
-    <mat-toolbar color="primary">
-
-
-      <button mat-button class="logo" (click)="toggleMenu()">
-        <img src="assets/logo.png" class="logo" alt="" height="30px">
-        <span class="title">Dragon's Zone</span>
-      </button>
-      <span class="menu">
-        <button class="menu-item" mat-button routerLink="/">首页</button>
-        <button class="menu-item" mat-button routerLink="/news">新鲜事</button>
-        <button class="menu-item" mat-button routerLink="/projects">项目概览</button>
-        <button class="menu-item" mat-button routerLink="/about">关于</button>
+  <mat-toolbar color="primary" class="mat-toolbar">
+    <button mat-button class="logo" (click)="go('/')">
+      <img src="assets/logo.png" class="logo" alt="" height="30px">
+      <span class="title">Dragon's Zone</span>
+    </button>
+    <span class="menu">
+        <button class="menu-item" mat-button (click)="go('/')">首页</button>
+        <button class="menu-item" mat-button (click)="go('/news')">新鲜事</button>
+        <button class="menu-item" mat-button (click)="go('/projects')">项目概览</button>
+        <button class="menu-item" mat-button (click)="go('/about')">关于</button>
       </span>
-      <span class="spacer"></span>
-      <a href="https://github.com/d7z-team" target="_blank">
+    <span class="spacer"></span>
+    <span class="menu-item">
+        <a href="https://github.com/d7z-team" target="_blank">
         <button class="menu-item" mat-button>Github</button>
       </a>
-    </mat-toolbar>
-  </p>
+      </span>
+    <mat-icon class="hide-menu-btn" (click)="showMenu = !showMenu">menu</mat-icon>
+  </mat-toolbar>
+  <mat-list class="hide-menu" [class.hide-menu-show]="showMenu">
+    <button class="hide-menu-item" mat-button (click)="go('/')">首页</button>
+    <mat-divider></mat-divider>
+    <button class="hide-menu-item" mat-button (click)="go('/news')">新鲜事</button>
+    <mat-divider></mat-divider>
+    <button class="hide-menu-item" mat-button (click)="go('/projects')">项目概览</button>
+    <mat-divider></mat-divider>
+    <button class="hide-menu-item" mat-button (click)="go('/about')">关于</button>
+    <mat-divider></mat-divider>
+  </mat-list>
 </div>
